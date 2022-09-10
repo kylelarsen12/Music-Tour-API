@@ -57,7 +57,7 @@ events.put("/:id", async (req, res) => {
       },
     });
     res.status(200).json({
-      message: `Succesfully updated event by the event of ${selectedEvent}`,
+      message: `Succesfully updated event by the event_id of ${selectedEvent}`,
       data: selectedEvent,
     });
   } catch (error) {
