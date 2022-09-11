@@ -24,10 +24,10 @@ bands.get("/", async (req, res) => {
 });
 
 //SHOW specific band
-bands.get("/:id", async (req, res) => {
+bands.get("/:band_name", async (req, res) => {
   try {
     const foundBand = await Band.findOne({
-      where: { band_id: req.params.id },
+      where: { band_name: req.params.band_name },
     });
     res.status(200).json(foundBand);
   } catch (error) {
